@@ -1,5 +1,3 @@
-公式ではhuggingface-cliを使ってすべてのモデルをダウンロードしていますが、セグメンテーションだけならrtmodel_e60.ckptだけを手動でmodels/AnimeInstanceSegmentationに保存すれば動きます。
-
 # cartoon-segmentation-docker
 
 [CartoonSegmentation](https://github.com/CartoonSegmentation/CartoonSegmentation)を使って簡単に背景削除できるようにしたスクリプト
