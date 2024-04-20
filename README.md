@@ -1,0 +1,2 @@
+公式ではhuggingface-cliを使ってすべてのモデルをダウンロードしていますが、セグメンテーションだけならrtmodel_e60.ckptだけを手動でmodels/AnimeInstanceSegmentationに保存すれば動きます。
+

@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cartoon-segmentation:latest
+    stop_grace_period: 0s
+    ipc: host
+    tty: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 'all'
+              capabilities: [gpu]
+    volumes:
+      - ./models:/app/models
+      - ./app.py:/app/app.py
+      - ./images:/images
+      - ./images_output:/images_output
+    # command: sleep infinity
+    command: python app.py
