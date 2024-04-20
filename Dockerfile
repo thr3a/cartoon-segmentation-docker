@@ -17,4 +17,3 @@ RUN apt-get update \
   && apt-get install --no-install-recommends -y python3.11-dev \
   && rm -rf /var/lib/apt/lists/*
 RUN pip install -r requirements.txt
-# RUN pip install cupy-cuda12x

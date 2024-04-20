@@ -57,8 +57,9 @@ def inference(img, filename):
         img_clopped[..., 3] = mask_clopped * 255
 
         basename = os.path.basename(filename)
-        without_ext, ext = os.path.splitext(basename)
-        output_filename = os.path.join(output_dir, f"{without_ext}_{str(ii)}.png")
+        without_ext, _ext = os.path.splitext(basename)
+        output_filename = os.path.join(output_dir, f"{without_ext}.png")
+        # output_filename = os.path.join(output_dir, f"{without_ext}_{str(ii)}.png")
         print("write:", output_filename)
         cv2.imwrite(output_filename, img_clopped)
 
